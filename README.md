@@ -91,6 +91,10 @@ It can also help to run the test suite, since there are tests which are failing 
 #### 1. Operating System
 > When I look at the Organizer Console for an event, the Operating System Breakdown table has difficult-to-read percentages listed for each OS.
 
+1. Search for the view page that renders the Organizer Console by searching "Operating System Breakdown"
+2. In `_operating_system_breakdown.erb`, line 20 has count percentage calculations
+2. add .round(2) to `((count.to_f / total) * 100)` to make the percentage easier to read 
+
 #### 2. Saving event as draft
 > When I save an event as a draft, I get a 500 error even though I have filled out all of the required fields.
 
